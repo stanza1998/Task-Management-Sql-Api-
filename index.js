@@ -8,6 +8,10 @@ const taskRoute = require('./routes/tasks');
 app.use(express.json());
 app.use(cors());
 
+
+app.get('/', (req, res) => {
+    res.send('Hello from Render!');
+});
 // Ensure this path starts with a leading slash
 app.use('/tasks', taskRoute);
 
